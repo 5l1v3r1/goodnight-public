@@ -9,7 +9,7 @@ client = tweepy.Client(config.BEARER_TOKEN, config.API_KEY, config.API_KEY_SECRE
 following = []
 users = []
 blacklist = ['nate64213419', 'StimpyPvP', 'ezPimpy']
-tweet = 'Goodnight @akaTimmay'
+tweet = 'gn @akaTimmay'
 
 
 def find_following():
@@ -39,12 +39,18 @@ def create_tweet():
     global tweet
     for user in users:
         tweet += user
+
+
+def post_tweet():
+    global tweet
     client.create_tweet(text=tweet, user_auth=True)
+
 
 def work():
     find_following()
     pick_users()
     create_tweet()
+    post_tweet()
     print("A goodnight tweet has been posted:")
     print("\tUsers: " + str(len(users)))
     print("\tCharacter count: " + str(len(tweet)))
