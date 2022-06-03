@@ -1,5 +1,4 @@
 import datetime
-
 import tweepy
 import config
 import random
@@ -8,18 +7,21 @@ import time
 client = tweepy.Client(config.BEARER_TOKEN, config.API_KEY, config.API_KEY_SECRET, config.ACCESS_TOKEN, config.ACCESS_TOKEN_SECRET, wait_on_rate_limit='true')
 following = []
 users = []
-blacklist = ['nate64213419', 'StimpyPvP', 'ezPimpy']
 tweet = 'gn @akaTimmay'
 
 
 def find_following():
     global following
-    global blacklist
     temp = client.get_users_following(1197975170, max_results=1000)
     for person in temp.data:
         following.append(person.username)
-    for user in blacklist:
+    for user in config.blacklist:
         following.remove(user)
+    for i in range(len(config.priority)):
+        following.append(config.priority(i))
+        following.append(config.priority(i))
+        following.append(config.priority(i))
+
 
 def pick_users():
     charCount = 0
@@ -58,7 +60,7 @@ def work():
 
 
 if __name__ == '__main__':
-    schedule.every().day.at("23:15:00").do(work)
+    schedule.every().day.at("23:00:00").do(work)
     while True:
         schedule.run_pending()
         time.sleep(10)
