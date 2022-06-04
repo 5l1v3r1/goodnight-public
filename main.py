@@ -8,16 +8,17 @@ client = tweepy.Client(config.BEARER_TOKEN, config.API_KEY, config.API_KEY_SECRE
 following = []
 users = []
 tweet = 'gn @akaTimmay'
-
+blacklist = ['nate64213419', 'StimpyPvP', 'ezPimpy', 'chubsgrl']
+priority = ['seakaori', 'mahvele']
 
 def find_following():
     global following
     temp = client.get_users_following(1197975170, max_results=1000)
     for person in temp.data:
         following.append(person.username)
-    for blacklistUser in config.blacklist:
+    for blacklistUser in blacklist:
         following.remove(blacklistUser)
-    for priorityUser in config.priority:
+    for priorityUser in priority:
         following.append(priorityUser)
         following.append(priorityUser)
         following.append(priorityUser)
@@ -60,8 +61,9 @@ def work():
 
 
 if __name__ == '__main__':
-    schedule.every().day.at("23:00:00").do(work)
-    while True:
-        schedule.run_pending()
-        time.sleep(10)
+    work()
+    #schedule.every().day.at("23:00:00").do(work)
+    #while True:
+        #schedule.run_pending()
+        #time.sleep(10)
 

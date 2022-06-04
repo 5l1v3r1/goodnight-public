@@ -4,5 +4,3 @@ BEARER_TOKEN = 'AAAAAAAAAAAAAAAAAAAAAECsdAEAAAAAiyhdiWPPdF0Y%2BNzHylIt41%2FAjKw%
 ACCESS_TOKEN = '1197975170-4Tk75MxtY2RuyUUzddvmBUBaDEwfUhZaJTNRSQS'
 ACCESS_TOKEN_SECRET = 't1OrLl6DB0tCwMKBChfO3pTeeFqo70bWPPRjVe5Ns54d6'
 TWEET_LENGTH = 265
-blacklist = ['nate64213419', 'StimpyPvP', 'ezPimpy', 'chubsgrl']
-priority = ['seakaori', 'mahvele']
