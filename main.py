@@ -15,12 +15,12 @@ def find_following():
     temp = client.get_users_following(1197975170, max_results=1000)
     for person in temp.data:
         following.append(person.username)
-    for user in config.blacklist:
-        following.remove(user)
-    for i in range(len(config.priority)):
-        following.append(config.priority(i))
-        following.append(config.priority(i))
-        following.append(config.priority(i))
+    for blacklistUser in config.blacklist:
+        following.remove(blacklistUser)
+    for priorityUser in config.priority:
+        following.append(priorityUser)
+        following.append(priorityUser)
+        following.append(priorityUser)
 
 
 def pick_users():
