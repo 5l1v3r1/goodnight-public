@@ -9,7 +9,7 @@ following = []
 users = []
 tweet = 'gn @akaTimmay'
 blacklist = ['StimpyPvP', 'ezPimpy', 'chubsgrl']
-priority = ['seakaori', 'mahvele', 'xyorin', 'xyobun']
+priority = ['seakaori', 'mahvele', 'OddOW_', 'xyobun']
 
 def find_following():
     global following
