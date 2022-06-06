@@ -1,4 +1,3 @@
-import datetime
 import tweepy
 import config
 import random
@@ -7,9 +6,9 @@ import time
 client = tweepy.Client(config.BEARER_TOKEN, config.API_KEY, config.API_KEY_SECRET, config.ACCESS_TOKEN, config.ACCESS_TOKEN_SECRET, wait_on_rate_limit='true')
 following = []
 users = []
-tweet = 'gn @akaTimmay'
+tweet = 'gn'
 blacklist = ['StimpyPvP', 'ezPimpy', 'chubsgrl']
-priority = ['seakaori', 'mahvele', 'OddOW_', 'xyobun']
+priority = ['seakaori', 'mahvele', 'OddOW_', 'xyobun', 'VERSUSSSSSSSS']
 
 def find_following():
     global following
