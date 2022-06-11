@@ -21,6 +21,7 @@ def find_following():
         following.append(priorityUser)
         following.append(priorityUser)
         following.append(priorityUser)
+    print(following)
 
 
 def pick_users():
@@ -57,7 +58,6 @@ def work():
     print("\tUsers: " + str(len(users)))
     print("\tCharacter count: " + str(len(tweet)))
     print(tweet)
-    print(users)
 
 
 if __name__ == '__main__':
